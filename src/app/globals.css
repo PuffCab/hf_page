@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/*
+ * Design tokens — sourced from the Figma file `HF_page` (key hBVb1ciDdbQgqvz31Qmtm4).
+ * The design is a single, committed dark theme; there is no light variant.
+ */
+@theme {
+  --color-ink: #0c0c0d; /* page background */
+  --color-surface: #18181a; /* cards, banded sections */
+  --color-line: #2a282d; /* hairline borders / rules */
+  --color-fg: #ffffff; /* primary text */
+  --color-muted: #a3a3a8; /* body / secondary text */
+  --color-faint: #66666a; /* metadata, timestamps */
+
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, "SFMono-Regular", monospace;
+  --font-serif: var(--font-cormorant), Georgia, "Times New Roman", serif;
+}
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-ink);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
