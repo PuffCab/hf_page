@@ -13,7 +13,7 @@ export function Disciplines() {
         {disciplines.map((discipline) => (
           <li
             key={discipline.slug}
-            className="flex flex-col gap-4 rounded-2xl border border-line bg-surface p-4"
+            className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-4"
           >
             <div className="relative aspect-[25/22] w-full overflow-hidden rounded-xl">
               <Image
@@ -25,10 +25,10 @@ export function Disciplines() {
               />
             </div>
             <div className="flex flex-col gap-3">
-              <h3 className="font-serif text-2xl font-semibold text-fg">
+              <h3 className="font-serif text-2xl font-semibold text-foreground">
                 {discipline.title}
               </h3>
-              <p className="text-sm leading-relaxed text-muted">
+              <p className="text-sm leading-relaxed text-muted-foreground">
                 {discipline.blurb}
               </p>
             </div>

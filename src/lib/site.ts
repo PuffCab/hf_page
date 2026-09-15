@@ -1,10 +1,10 @@
 export const siteConfig = {
-  name: "Hendrick Flacke",
-  role: "Theatre & Voice",
+  name: "Hendrik Flacke",
+  role: "Actor & Director",
   tagline:
     "A theatrical operator crafting high-stakes narratives across the physical stage, the written page, and the microphone.",
-  locations: "Berlin · Hamburg · London",
-  inquiries: ["representation@flacke.de", "direct@hendrickflacke.com"],
+  locations: "Berlin",
+  inquiries: ["representation@flacke.de", "direct@hendrikflacke.com"],
   socials: [
     { label: "Instagram", href: "https://instagram.com" },
     { label: "LinkedIn", href: "https://linkedin.com" },

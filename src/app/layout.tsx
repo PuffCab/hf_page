@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import { SiteFooter } from "@/components/site-footer";
+import { ThemeProvider } from "@/components/theme-provider";
 import { siteConfig } from "@/lib/site";
 
 const geistSans = Geist({
@@ -23,7 +24,7 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: `${siteConfig.name} — ${siteConfig.role}`,
   description:
-    "Hendrick Flacke — actor, playwright, director and voice artist working at the structural heart of German and international theatre.",
+    "Hendrik Flacke — actor, playwright, director and voice artist working at the structural heart of German and international theatre.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
@@ -31,10 +32,13 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${cormorant.variable} h-full`}
+      suppressHydrationWarning
     >
       <body className="min-h-full">
-        {children}
-        <SiteFooter />
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          {children}
+          <SiteFooter />
+        </ThemeProvider>
       </body>
     </html>
   );

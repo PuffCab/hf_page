@@ -2,7 +2,7 @@
 
 # CLAUDE.md — hf-page
 
-Portfolio website for **Hendrick Flacke** — a theatre and voice artist (actor · playwright · director · voice artist).
+Portfolio website for **Hendrik Flacke** — a theatre and voice artist (actor · playwright · director · voice artist).
 This project is standalone and unrelated to the Luzterra codebase.
 
 ---

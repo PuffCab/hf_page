@@ -2,14 +2,14 @@ import { siteConfig } from "@/lib/site";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-line bg-ink">
+    <footer className="border-t border-border bg-background">
       <div className="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 pb-6 pt-10 md:px-16 lg:px-[120px]">
         <div className="flex flex-col justify-between gap-10 md:flex-row md:items-start">
           <div className="flex max-w-[640px] flex-col gap-6">
-            <p className="font-serif text-[clamp(2.5rem,7vw,4.5rem)] font-bold leading-none text-fg">
+            <p className="font-serif text-[clamp(2.5rem,7vw,4.5rem)] font-bold leading-none text-foreground">
               {siteConfig.name.toUpperCase()}
             </p>
-            <p className="text-base leading-relaxed text-muted">
+            <p className="text-base leading-relaxed text-muted-foreground">
               {siteConfig.tagline}
             </p>
           </div>
@@ -21,7 +21,7 @@ export function SiteFooter() {
                 <a
                   key={email}
                   href={`mailto:${email}`}
-                  className="text-base text-fg transition-colors hover:text-muted"
+                  className="text-base text-foreground transition-colors hover:text-muted-foreground"
                 >
                   {email}
                 </a>
@@ -36,7 +36,7 @@ export function SiteFooter() {
                   href={social.href}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-base text-fg transition-colors hover:text-muted"
+                  className="text-base text-foreground transition-colors hover:text-muted-foreground"
                 >
                   {social.label}
                 </a>
