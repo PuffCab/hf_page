@@ -16,29 +16,35 @@ function useMounted() {
   );
 }
 
-export function ThemeToggle() {
+type ThemeToggleProps = {
+  /** Render at a smaller size, e.g. inside a shrunk sticky header. */
+  compact?: boolean;
+};
+
+export function ThemeToggle({ compact = false }: ThemeToggleProps) {
   const { resolvedTheme, setTheme } = useTheme();
   const mounted = useMounted();
 
   const isDark = mounted && resolvedTheme === "dark";
+  const iconClassName = compact ? "size-3.5" : "size-4";
 
   return (
     <Button
       type="button"
       variant="ghost"
-      size="icon"
+      size={compact ? "icon-sm" : "icon"}
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
       onClick={() => setTheme(isDark ? "light" : "dark")}
-      className="text-foreground hover:bg-accent"
+      className="text-foreground transition-[width,height] duration-300 ease-out hover:bg-accent"
     >
       {mounted ? (
         isDark ? (
-          <Sun className="size-4" />
+          <Sun className={iconClassName} />
         ) : (
-          <Moon className="size-4" />
+          <Moon className={iconClassName} />
         )
       ) : (
-        <span className="size-4" />
+        <span className={iconClassName} />
       )}
     </Button>
   );
