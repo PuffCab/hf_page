@@ -21,7 +21,7 @@ export function Hero() {
           {siteConfig.name}
         </h1>
         <p className="font-mono text-[clamp(0.8rem,2.4vw,2.4rem)] font-medium uppercase [text-wrap:balance]">
-          Actor · Playwright · Director · Voice Artist
+          Actor · Director · Voice Artist
         </p>
       </div>
     </section>

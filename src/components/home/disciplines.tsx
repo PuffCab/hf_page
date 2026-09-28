@@ -6,10 +6,10 @@ export function Disciplines() {
   return (
     <section className="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 py-16 md:px-16 lg:px-[120px]">
       <SectionHeading eyebrow="// Disciplines">
-        The Craft in Four Registers
+        The Craft in Three Registers
       </SectionHeading>
 
-      <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {disciplines.map((discipline) => (
           <li
             key={discipline.slug}

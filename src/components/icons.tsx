@@ -42,3 +42,22 @@ export function PlayIcon(props: SVGProps<SVGSVGElement>) {
     </svg>
   );
 }
+
+/** Pause glyph drawn to match `PlayIcon`'s 18px grid, for the voice sample players. */
+export function PauseIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      viewBox="0 0 18 18"
+      fill="none"
+      aria-hidden="true"
+      {...props}
+    >
+      <path
+        d="M5.25 3.75V14.25M12.75 3.75V14.25"
+        stroke="currentColor"
+        strokeWidth="4"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}

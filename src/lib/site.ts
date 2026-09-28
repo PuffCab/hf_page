@@ -14,7 +14,6 @@ export const siteConfig = {
 export const navLinks = [
   { label: "Home", href: "/" },
   { label: "Actor", href: "/actor" },
-  { label: "Playwright", href: "/playwright" },
   { label: "Director", href: "/director" },
   { label: "Voice", href: "/voice" },
   { label: "Bio", href: "/bio" },

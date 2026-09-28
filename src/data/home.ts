@@ -14,13 +14,6 @@ export const disciplines: Discipline[] = [
     image: "/images/discipline-acting.png",
   },
   {
-    slug: "playwriting",
-    title: "Playwriting",
-    blurb:
-      "Developing sharp, challenging modern plays that test the boundaries of human agency.",
-    image: "/images/discipline-playwriting.png",
-  },
-  {
     slug: "directing",
     title: "Directing",
     blurb:

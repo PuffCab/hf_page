@@ -24,7 +24,7 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: `${siteConfig.name} — ${siteConfig.role}`,
   description:
-    "Hendrik Flacke — actor, playwright, director and voice artist working at the structural heart of German and international theatre.",
+    "Hendrik Flacke — actor, director and voice artist working at the structural heart of German and international theatre.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
