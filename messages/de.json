@@ -1,0 +1,105 @@
+{
+  "Metadata": {
+    "siteTitle": "{name} — Schauspiel & Regie",
+    "siteDescription": "Hendrik Flacke — Schauspiel, Regie und Sprechkunst im strukturellen Herzen des deutschen und internationalen Theaters.",
+    "actorTitle": "Schauspiel — {name}",
+    "actorDescription": "Ausgewählte Bühnenproduktionen aus Hendrik Flackes Arbeit als Schauspieler, von Hamlet bis Gespenster.",
+    "directorTitle": "Regie — {name}",
+    "directorDescription": "Regiearbeiten von Hendrik Flacke, darunter Medea, Warten auf Godot und weitere Inszenierungen.",
+    "voiceTitle": "Stimme — {name}",
+    "voiceDescription": "Hendrik Flackes Sprecherarbeit: Erzählung, Werbung, Hörbücher und Synchronisation.",
+    "bioTitle": "Biografie — {name}",
+    "bioDescription": "Der Mann hinter der Dramaturgie — Hendrik Flackes Biografie, Auszeichnungen und Vertretung."
+  },
+  "Nav": {
+    "label": "Hauptnavigation",
+    "home": "Start",
+    "actor": "Schauspiel",
+    "director": "Regie",
+    "voice": "Stimme",
+    "bio": "Biografie"
+  },
+  "Header": {
+    "role": "Schauspiel & Regie"
+  },
+  "Footer": {
+    "tagline": "Ein Theatermacher, der Erzählungen von hoher Fallhöhe schafft — auf der Bühne, auf der Seite und am Mikrofon.",
+    "inquiries": "Anfragen",
+    "social": "Social Media",
+    "rights": "© {year} {name}. Alle Rechte vorbehalten."
+  },
+  "Theme": {
+    "toLight": "Zum hellen Modus wechseln",
+    "toDark": "Zum dunklen Modus wechseln"
+  },
+  "Language": {
+    "label": "Sprache",
+    "switchTo": "Wechseln zu {language}",
+    "de": "Deutsch",
+    "en": "English"
+  },
+  "Common": {
+    "showMore": "{count} weitere {label} anzeigen",
+    "showLess": "Weniger anzeigen",
+    "documentation": "// Dokumentation"
+  },
+  "Home": {
+    "heroAlt": "Porträt von Hendrik Flacke",
+    "heroSubtitle": "Schauspiel · Regie · Sprechkunst",
+    "disciplinesEyebrow": "// Disziplinen",
+    "disciplinesHeading": "Das Handwerk in drei Registern",
+    "aboutQuote": "„Das Programmheft ist eine Landkarte von Verpflichtungen.“",
+    "aboutBody": "Seit über zwei Jahrzehnten arbeitet Hendrik Flacke im strukturellen Herzen des deutschen und internationalen Theaters. Sein Ansatz verbindet die körperliche Strenge des Schauspiels mit den architektonischen Anforderungen von Regie und Textarbeit — und baut einzigartige Theaterwelten, geprägt von intellektueller Herausforderung und roher, ungeschönter menschlicher Wahrheit.",
+    "aboutCta": "Biografie lesen",
+    "pressEyebrow": "// Kritiken & Presse",
+    "pressHeading": "Ausgewählte Pressestimmen"
+  },
+  "Actor": {
+    "heroAlt": "Eine für ein Solo ausgeleuchtete Bühne",
+    "heroTitle": "Schauspiel",
+    "heroSubtitle": "Ausgewählte Bühnenproduktionen",
+    "productionsEyebrow": "// Theaterengagements im Überblick",
+    "productionsHeading": "Zentrale Bühnenrollen",
+    "productionsMore": "Aufführungen",
+    "productionStillAlt": "Szenenfoto aus {title}",
+    "role": "Rolle:",
+    "reelsHeading": "Showreels",
+    "reelsMore": "Reels"
+  },
+  "Director": {
+    "heroAlt": "Ein Regisseur beobachtet einen Schauspieler bei der Solo-Probe auf einer leeren Bühne",
+    "heroTitle": "Regie",
+    "heroSubtitle": "Theatrale Choreografie & Inszenierung",
+    "productionsEyebrow": "// Regielebenslauf",
+    "productionsHeading": "Inszenierte Produktionen",
+    "productionStillAlt": "Szenenfoto aus der Inszenierung {title}",
+    "stagedAt": "Inszeniert am:",
+    "footageHeading": "Proben- & Prozessaufnahmen"
+  },
+  "Voice": {
+    "heroAlt": "Ein Studio-Kondensatormikrofon vor Akustikschaumstoff-Paneelen",
+    "heroTitle": "Stimme",
+    "heroSubtitle": "Erzählung, Hörbücher & Werbung",
+    "repertoireEyebrow": "// Sprecher-Repertoire",
+    "repertoireHeading": "Akustisches Handwerk quer durch die Genres",
+    "client": "Auftraggeber: {client}",
+    "play": "{title} abspielen",
+    "pause": "{title} pausieren",
+    "comingSoonLabel": "Hörprobe zu {title} folgt in Kürze",
+    "comingSoon": "Hörprobe folgt in Kürze"
+  },
+  "Bio": {
+    "heroAlt": "Eine leere Theaterbühne, von oben beleuchtet",
+    "heroTitle": "Biografie",
+    "heroSubtitle": "Der Mann hinter der Dramaturgie",
+    "portraitAlt": "Porträt von Hendrik Flacke",
+    "portraitCaption": "Hendrik Flacke · Porträt 2026",
+    "pullQuote": "„Wir bauen Bühnenarchitekturen aus Stille und Strenge.“",
+    "galleryEyebrow": "// Archiv & Erinnerungen",
+    "galleryHeading": "Bühnen- & Studiogalerie",
+    "awardsEyebrow": "// Auszeichnungen",
+    "awardsHeading": "Anerkennung",
+    "representationEyebrow": "// Kontakt",
+    "representationHeading": "Vertretung"
+  }
+}

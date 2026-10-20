@@ -1,12 +1,15 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/section-heading";
 import { disciplines } from "@/data/home";
 
 export function Disciplines() {
+  const t = useTranslations("Home");
+
   return (
     <section className="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 py-16 md:px-16 lg:px-[120px]">
-      <SectionHeading eyebrow="// Disciplines">
-        The Craft in Three Registers
+      <SectionHeading eyebrow={t("disciplinesEyebrow")}>
+        {t("disciplinesHeading")}
       </SectionHeading>
 
       <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">

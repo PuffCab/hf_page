@@ -1,14 +1,18 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/section-heading";
 import { PlayIcon } from "@/components/icons";
 import { rehearsalReels } from "@/data/director";
 
 export function RehearsalFootage() {
+  const t = useTranslations("Director");
+  const tCommon = useTranslations("Common");
+
   return (
     <section className="border-y border-border bg-card">
       <div className="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 py-16 md:px-16 lg:px-[120px]">
-        <SectionHeading eyebrow="// Documentation">
-          Rehearsal &amp; Process Footage
+        <SectionHeading eyebrow={tCommon("documentation")}>
+          {t("footageHeading")}
         </SectionHeading>
 
         <ul className="grid gap-6 md:grid-cols-2">

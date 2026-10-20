@@ -1,8 +1,5 @@
 export const siteConfig = {
   name: "Hendrik Flacke",
-  role: "Actor & Director",
-  tagline:
-    "A theatrical operator crafting high-stakes narratives across the physical stage, the written page, and the microphone.",
   locations: "Berlin",
   inquiries: ["representation@flacke.de", "direct@hendrikflacke.com"],
   socials: [
@@ -11,10 +8,11 @@ export const siteConfig = {
   ],
 } as const;
 
+/** `labelKey` resolves against the `Nav` namespace in `messages/*.json`. */
 export const navLinks = [
-  { label: "Home", href: "/" },
-  { label: "Actor", href: "/actor" },
-  { label: "Director", href: "/director" },
-  { label: "Voice", href: "/voice" },
-  { label: "Bio", href: "/bio" },
+  { labelKey: "home", href: "/" },
+  { labelKey: "actor", href: "/actor" },
+  { labelKey: "director", href: "/director" },
+  { labelKey: "voice", href: "/voice" },
+  { labelKey: "bio", href: "/bio" },
 ] as const;

@@ -1,11 +1,14 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export function VoiceHero() {
+  const t = useTranslations("Voice");
+
   return (
     <section className="relative isolate flex min-h-[320px] flex-col justify-end overflow-hidden px-6 pb-10 md:px-16 md:pb-14 lg:min-h-[420px] lg:px-[120px]">
       <Image
         src="/images/voice-header.png"
-        alt="A studio condenser microphone in front of acoustic foam panels"
+        alt={t("heroAlt")}
         fill
         priority
         sizes="100vw"
@@ -17,10 +20,10 @@ export function VoiceHero() {
           background, so it stays a fixed light color in both themes. */}
       <div className="relative flex flex-col gap-3 text-white">
         <h1 className="font-serif text-[clamp(3rem,9vw,6rem)] font-bold leading-[0.9]">
-          Voice
+          {t("heroTitle")}
         </h1>
         <p className="font-mono text-sm uppercase tracking-wide text-white/70 md:text-base">
-          Narration, Audiobooks &amp; Commercials
+          {t("heroSubtitle")}
         </p>
       </div>
     </section>

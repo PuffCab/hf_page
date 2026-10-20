@@ -1,12 +1,15 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { siteConfig } from "@/lib/site";
 
 export function Hero() {
+  const t = useTranslations("Home");
+
   return (
     <section className="relative isolate flex min-h-[100svh] flex-col justify-end overflow-hidden px-6 pb-14 md:px-16 md:pb-24 lg:px-[120px]">
       <Image
         src="/images/hero.png"
-        alt="Portrait of Hendrik Flacke"
+        alt={t("heroAlt")}
         fill
         priority
         sizes="100vw"
@@ -21,7 +24,7 @@ export function Hero() {
           {siteConfig.name}
         </h1>
         <p className="font-mono text-[clamp(0.8rem,2.4vw,2.4rem)] font-medium uppercase [text-wrap:balance]">
-          Actor · Director · Voice Artist
+          {t("heroSubtitle")}
         </p>
       </div>
     </section>

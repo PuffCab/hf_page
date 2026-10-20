@@ -1,9 +1,10 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
+import { Link, usePathname } from "@/i18n/navigation";
 import { navLinks, siteConfig } from "@/lib/site";
+import { LanguageSwitcher } from "@/components/language-switcher";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
 
@@ -11,6 +12,8 @@ import { cn } from "@/lib/utils";
 const COMPACT_SCROLL_THRESHOLD = 48;
 
 export function SiteHeader() {
+  const t = useTranslations("Header");
+  const tNav = useTranslations("Nav");
   const pathname = usePathname();
   const headerRef = useRef<HTMLElement>(null);
   const [compact, setCompact] = useState(false);
@@ -80,12 +83,13 @@ export function SiteHeader() {
                 : "max-h-6 text-xs opacity-100 md:text-sm",
             )}
           >
-            {siteConfig.role}
+            {t("role")}
           </span>
         </Link>
 
         <div className="flex flex-wrap items-center gap-x-8 gap-y-4">
           <nav
+            aria-label={tNav("label")}
             className={cn(
               "flex flex-wrap transition-all duration-300 ease-out",
               compact ? "gap-x-4 gap-y-2" : "gap-x-6 gap-y-3",
@@ -110,7 +114,7 @@ export function SiteHeader() {
                       : "text-muted-foreground hover:text-foreground",
                   )}
                 >
-                  {link.label}
+                  {tNav(link.labelKey)}
                   <span
                     className={cn(
                       "absolute bg-foreground transition-all duration-300 ease-out",
@@ -123,7 +127,10 @@ export function SiteHeader() {
             })}
           </nav>
 
-          <ThemeToggle compact={compact} />
+          <div className="flex items-center gap-4">
+            <LanguageSwitcher compact={compact} />
+            <ThemeToggle compact={compact} />
+          </div>
         </div>
       </div>
     </header>

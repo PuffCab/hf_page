@@ -1,11 +1,14 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export function BioHero() {
+  const t = useTranslations("Bio");
+
   return (
     <section className="relative isolate flex min-h-[320px] flex-col justify-end overflow-hidden px-6 pb-10 md:px-16 md:pb-14 lg:min-h-[420px] lg:px-[120px]">
       <Image
         src="/images/bio-header.png"
-        alt="An empty theatre stage lit from above"
+        alt={t("heroAlt")}
         fill
         priority
         sizes="100vw"
@@ -17,10 +20,10 @@ export function BioHero() {
           background, so it stays a fixed light color in both themes. */}
       <div className="relative flex flex-col gap-3 text-white">
         <h1 className="font-serif text-[clamp(3rem,9vw,6rem)] font-bold leading-[0.9]">
-          Bio
+          {t("heroTitle")}
         </h1>
         <p className="font-mono text-sm uppercase tracking-wide text-white/70 md:text-base">
-          The Man Behind the Dramaturgy
+          {t("heroSubtitle")}
         </p>
       </div>
     </section>

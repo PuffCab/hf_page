@@ -1,12 +1,15 @@
+import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/section-heading";
 import { WaveformPlayer } from "@/components/voice/waveform-player";
 import { voiceCategories } from "@/data/voice";
 
 export function VoiceRepertoire() {
+  const t = useTranslations("Voice");
+
   return (
     <section className="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 py-16 md:px-16 lg:px-[120px]">
-      <SectionHeading eyebrow="// VO Work Repertoire">
-        Acoustic Craft across Genres
+      <SectionHeading eyebrow={t("repertoireEyebrow")}>
+        {t("repertoireHeading")}
       </SectionHeading>
 
       <ul className="grid gap-6 md:grid-cols-2">
@@ -31,7 +34,7 @@ export function VoiceRepertoire() {
                     </span>
                   </div>
                   <p className="text-base text-muted-foreground">
-                    Client: {sample.client}
+                    {t("client", { client: sample.client })}
                   </p>
                   <WaveformPlayer sample={sample} />
                 </li>
