@@ -58,6 +58,12 @@ export const productions: Production[] = [
   },
 ];
 
+// Newest-first regardless of insertion order, so future credits can be
+// appended anywhere in the list above without needing manual reordering.
+export const sortedProductions = [...productions].sort(
+  (a, b) => Number(b.year) - Number(a.year),
+);
+
 export type PerformanceReel = {
   slug: string;
   title: string;

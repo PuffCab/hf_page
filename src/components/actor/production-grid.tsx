@@ -1,6 +1,9 @@
 import Image from "next/image";
 import { SectionHeading } from "@/components/section-heading";
-import { productions } from "@/data/actor";
+import { ShowMoreList } from "@/components/show-more-list";
+import { sortedProductions } from "@/data/actor";
+
+const INITIAL_VISIBLE_COUNT = 6;
 
 export function ProductionGrid() {
   return (
@@ -9,8 +12,11 @@ export function ProductionGrid() {
         Core Stage Performances
       </SectionHeading>
 
-      <ul className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {productions.map((production) => (
+      <ShowMoreList
+        initialCount={INITIAL_VISIBLE_COUNT}
+        moreLabel="performances"
+        listClassName="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        items={sortedProductions.map((production) => (
           <li
             key={production.slug}
             className="flex flex-col gap-3 rounded-2xl border border-border bg-card p-4"
@@ -40,7 +46,7 @@ export function ProductionGrid() {
             </div>
           </li>
         ))}
-      </ul>
+      />
     </section>
   );
 }
