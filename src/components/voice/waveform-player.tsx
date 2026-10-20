@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { PauseIcon, PlayIcon } from "@/components/icons";
 import { waveformBars, type VoiceSample } from "@/data/voice";
@@ -18,6 +19,7 @@ type WaveformPlayerProps = {
 };
 
 export function WaveformPlayer({ sample }: WaveformPlayerProps) {
+  const t = useTranslations("Voice");
   const audioRef = useRef<HTMLAudioElement>(null);
   const [playing, setPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -75,10 +77,10 @@ export function WaveformPlayer({ sample }: WaveformPlayerProps) {
         disabled={!available}
         aria-label={
           available
-            ? `${playing ? "Pause" : "Play"} ${sample.title}`
-            : `${sample.title} sample coming soon`
+            ? t(playing ? "pause" : "play", { title: sample.title })
+            : t("comingSoonLabel", { title: sample.title })
         }
-        title={available ? undefined : "Sample coming soon"}
+        title={available ? undefined : t("comingSoon")}
         className="flex size-8 shrink-0 items-center justify-center text-foreground transition-opacity hover:opacity-70 disabled:cursor-not-allowed disabled:opacity-40"
       >
         {playing ? (

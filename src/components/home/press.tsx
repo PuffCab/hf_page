@@ -1,11 +1,14 @@
+import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/section-heading";
 import { press } from "@/data/home";
 
 export function Press() {
+  const t = useTranslations("Home");
+
   return (
     <section className="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 py-16 md:px-16 lg:px-[120px]">
-      <SectionHeading eyebrow="// Reviews & Press">
-        Selected Critical Reception
+      <SectionHeading eyebrow={t("pressEyebrow")}>
+        {t("pressHeading")}
       </SectionHeading>
 
       <ul className="grid gap-6 md:grid-cols-3">

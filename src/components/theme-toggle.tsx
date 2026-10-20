@@ -2,6 +2,7 @@
 
 import { useSyncExternalStore } from "react";
 import { Moon, Sun } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 
@@ -22,6 +23,7 @@ type ThemeToggleProps = {
 };
 
 export function ThemeToggle({ compact = false }: ThemeToggleProps) {
+  const t = useTranslations("Theme");
   const { resolvedTheme, setTheme } = useTheme();
   const mounted = useMounted();
 
@@ -33,7 +35,7 @@ export function ThemeToggle({ compact = false }: ThemeToggleProps) {
       type="button"
       variant="ghost"
       size={compact ? "icon-sm" : "icon"}
-      aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
+      aria-label={isDark ? t("toLight") : t("toDark")}
       onClick={() => setTheme(isDark ? "light" : "dark")}
       className="text-foreground transition-[width,height] duration-300 ease-out hover:bg-accent"
     >

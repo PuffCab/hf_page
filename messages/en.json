@@ -1,0 +1,105 @@
+{
+  "Metadata": {
+    "siteTitle": "{name} — Actor & Director",
+    "siteDescription": "Hendrik Flacke — actor, director and voice artist working at the structural heart of German and international theatre.",
+    "actorTitle": "Actor — {name}",
+    "actorDescription": "Selected stage productions from Hendrik Flacke's work as an actor, from Hamlet to Ghosts.",
+    "directorTitle": "Director — {name}",
+    "directorDescription": "Directorial résumé from Hendrik Flacke's work staging Medea, Waiting for Godot, and other productions.",
+    "voiceTitle": "Voice — {name}",
+    "voiceDescription": "Hendrik Flacke's voice work across narration, commercials, audiobooks and dubbing.",
+    "bioTitle": "Bio — {name}",
+    "bioDescription": "The man behind the dramaturgy — Hendrik Flacke's biography, recognition, and representation."
+  },
+  "Nav": {
+    "label": "Main navigation",
+    "home": "Home",
+    "actor": "Actor",
+    "director": "Director",
+    "voice": "Voice",
+    "bio": "Bio"
+  },
+  "Header": {
+    "role": "Actor & Director"
+  },
+  "Footer": {
+    "tagline": "A theatrical operator crafting high-stakes narratives across the physical stage, the written page, and the microphone.",
+    "inquiries": "Inquiries",
+    "social": "Social",
+    "rights": "© {year} {name}. All rights reserved."
+  },
+  "Theme": {
+    "toLight": "Switch to light mode",
+    "toDark": "Switch to dark mode"
+  },
+  "Language": {
+    "label": "Language",
+    "switchTo": "Switch to {language}",
+    "de": "Deutsch",
+    "en": "English"
+  },
+  "Common": {
+    "showMore": "Show {count} more {label}",
+    "showLess": "Show less",
+    "documentation": "// Documentation"
+  },
+  "Home": {
+    "heroAlt": "Portrait of Hendrik Flacke",
+    "heroSubtitle": "Actor · Director · Voice Artist",
+    "disciplinesEyebrow": "// Disciplines",
+    "disciplinesHeading": "The Craft in Three Registers",
+    "aboutQuote": "“The playbill is a map of commitments.”",
+    "aboutBody": "For over two decades, Hendrik Flacke has operated at the structural heart of German and international theatre. His approach integrates the physical rigor of acting with the architectural demands of directing and script authorship—building singular theatrical worlds defined by intellectual challenge and raw, unvarnished human truth.",
+    "aboutCta": "Read Biography",
+    "pressEyebrow": "// Reviews & Press",
+    "pressHeading": "Selected Critical Reception"
+  },
+  "Actor": {
+    "heroAlt": "Stage lit for a solo performance",
+    "heroTitle": "Actor",
+    "heroSubtitle": "Selected Stage Productions",
+    "productionsEyebrow": "// Theatre Credit Summary",
+    "productionsHeading": "Core Stage Performances",
+    "productionsMore": "performances",
+    "productionStillAlt": "{title} production still",
+    "role": "Role:",
+    "reelsHeading": "Performance Reels",
+    "reelsMore": "reels"
+  },
+  "Director": {
+    "heroAlt": "A director watching a solo actor rehearse on a bare stage",
+    "heroTitle": "Director",
+    "heroSubtitle": "Theatrical Choreography & Staging",
+    "productionsEyebrow": "// Directorial Résumé",
+    "productionsHeading": "Staged Productions",
+    "productionStillAlt": "{title} staged production still",
+    "stagedAt": "Staged at:",
+    "footageHeading": "Rehearsal & Process Footage"
+  },
+  "Voice": {
+    "heroAlt": "A studio condenser microphone in front of acoustic foam panels",
+    "heroTitle": "Voice",
+    "heroSubtitle": "Narration, Audiobooks & Commercials",
+    "repertoireEyebrow": "// VO Work Repertoire",
+    "repertoireHeading": "Acoustic Craft across Genres",
+    "client": "Client: {client}",
+    "play": "Play {title}",
+    "pause": "Pause {title}",
+    "comingSoonLabel": "{title} sample coming soon",
+    "comingSoon": "Sample coming soon"
+  },
+  "Bio": {
+    "heroAlt": "An empty theatre stage lit from above",
+    "heroTitle": "Bio",
+    "heroSubtitle": "The Man Behind the Dramaturgy",
+    "portraitAlt": "Portrait of Hendrik Flacke",
+    "portraitCaption": "Hendrik Flacke · Portrait 2026",
+    "pullQuote": "“We build stage architectures out of silence and rigor.”",
+    "galleryEyebrow": "// Archive & Memories",
+    "galleryHeading": "Stage & Studio Gallery",
+    "awardsEyebrow": "// Awards",
+    "awardsHeading": "Recognition",
+    "representationEyebrow": "// Get in Touch",
+    "representationHeading": "Representation"
+  }
+}

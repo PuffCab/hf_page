@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { bioAwards, bioRepresentation } from "@/data/bio";
 
 /**
@@ -25,10 +26,14 @@ function SubsectionHeading({
 }
 
 export function BioRecognition() {
+  const t = useTranslations("Bio");
+
   return (
     <section className="mx-auto flex max-w-[1440px] flex-col gap-12 px-6 py-16 md:px-16 lg:flex-row lg:px-[120px]">
       <div className="flex flex-1 flex-col gap-8">
-        <SubsectionHeading eyebrow="// Awards">Recognition</SubsectionHeading>
+        <SubsectionHeading eyebrow={t("awardsEyebrow")}>
+          {t("awardsHeading")}
+        </SubsectionHeading>
 
         <ul className="flex flex-col gap-4">
           {bioAwards.map((award) => (
@@ -53,8 +58,8 @@ export function BioRecognition() {
       </div>
 
       <div className="flex flex-col gap-8 rounded-2xl border border-border bg-card p-8 lg:w-[420px] lg:shrink-0">
-        <SubsectionHeading eyebrow="// Get in Touch">
-          Representation
+        <SubsectionHeading eyebrow={t("representationEyebrow")}>
+          {t("representationHeading")}
         </SubsectionHeading>
 
         <div className="flex flex-col gap-3">

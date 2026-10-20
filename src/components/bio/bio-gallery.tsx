@@ -1,13 +1,16 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/section-heading";
 import { bioGallery } from "@/data/bio";
 
 export function BioGallery() {
+  const t = useTranslations("Bio");
+
   return (
     <section className="border-y border-border bg-card">
       <div className="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 py-16 md:px-16 lg:px-[120px]">
-        <SectionHeading eyebrow="// Archive & Memories">
-          Stage &amp; Studio Gallery
+        <SectionHeading eyebrow={t("galleryEyebrow")}>
+          {t("galleryHeading")}
         </SectionHeading>
 
         <ul className="grid grid-cols-2 gap-4 sm:grid-cols-3">

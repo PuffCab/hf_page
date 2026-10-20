@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/section-heading";
 import { PlayIcon } from "@/components/icons";
 import { ShowMoreList } from "@/components/show-more-list";
@@ -7,14 +8,19 @@ import { performanceReels } from "@/data/actor";
 const INITIAL_VISIBLE_COUNT = 4;
 
 export function PerformanceReels() {
+  const t = useTranslations("Actor");
+  const tCommon = useTranslations("Common");
+
   return (
     <section className="border-y border-border bg-card">
       <div className="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 py-16 md:px-16 lg:px-[120px]">
-        <SectionHeading eyebrow="// Documentation">Performance Reels</SectionHeading>
+        <SectionHeading eyebrow={tCommon("documentation")}>
+          {t("reelsHeading")}
+        </SectionHeading>
 
         <ShowMoreList
           initialCount={INITIAL_VISIBLE_COUNT}
-          moreLabel="reels"
+          moreLabel={t("reelsMore")}
           listClassName="grid gap-6 md:grid-cols-2"
           items={performanceReels.map((reel) => (
             <li key={reel.slug} className="flex flex-col gap-3">

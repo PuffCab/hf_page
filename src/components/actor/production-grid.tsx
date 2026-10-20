@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/section-heading";
 import { ShowMoreList } from "@/components/show-more-list";
 import { sortedProductions } from "@/data/actor";
@@ -6,15 +7,17 @@ import { sortedProductions } from "@/data/actor";
 const INITIAL_VISIBLE_COUNT = 6;
 
 export function ProductionGrid() {
+  const t = useTranslations("Actor");
+
   return (
     <section className="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 py-16 md:px-16 lg:px-[120px]">
-      <SectionHeading eyebrow="// Theatre Credit Summary">
-        Core Stage Performances
+      <SectionHeading eyebrow={t("productionsEyebrow")}>
+        {t("productionsHeading")}
       </SectionHeading>
 
       <ShowMoreList
         initialCount={INITIAL_VISIBLE_COUNT}
-        moreLabel="performances"
+        moreLabel={t("productionsMore")}
         listClassName="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
         items={sortedProductions.map((production) => (
           <li
@@ -24,7 +27,7 @@ export function ProductionGrid() {
             <div className="relative aspect-[3/2] w-full overflow-hidden rounded-xl">
               <Image
                 src={production.image}
-                alt={`${production.title} production still`}
+                alt={t("productionStillAlt", { title: production.title })}
                 fill
                 sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
                 className="object-cover"
@@ -40,7 +43,7 @@ export function ProductionGrid() {
                 </span>
               </div>
               <p className="text-sm text-muted-foreground">
-                Role: <span className="font-semibold text-foreground">{production.role}</span>
+                {t("role")} <span className="font-semibold text-foreground">{production.role}</span>
               </p>
               <p className="text-sm text-faint">{production.venue}</p>
             </div>

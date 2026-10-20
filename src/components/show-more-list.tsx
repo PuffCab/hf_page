@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useState, type ReactNode } from "react";
 import { ArrowRight } from "@/components/icons";
 import { cn } from "@/lib/utils";
@@ -8,6 +9,7 @@ type ShowMoreListProps = {
   items: ReactNode[];
   initialCount: number;
   listClassName: string;
+  /** Translated plural noun for the toggle, e.g. "reels" → "Show 3 more reels". */
   moreLabel: string;
 };
 
@@ -22,6 +24,7 @@ export function ShowMoreList({
   listClassName,
   moreLabel,
 }: ShowMoreListProps) {
+  const t = useTranslations("Common");
   const [expanded, setExpanded] = useState(false);
   const hiddenCount = items.length - initialCount;
   const visibleItems = expanded ? items : items.slice(0, initialCount);
@@ -36,7 +39,9 @@ export function ShowMoreList({
           onClick={() => setExpanded((value) => !value)}
           className="group inline-flex w-fit items-center gap-3 font-mono text-sm uppercase tracking-wide text-foreground"
         >
-          {expanded ? "Show less" : `Show ${hiddenCount} more ${moreLabel}`}
+          {expanded
+            ? t("showLess")
+            : t("showMore", { count: hiddenCount, label: moreLabel })}
           <ArrowRight
             className={cn(
               "size-5 transition-transform",

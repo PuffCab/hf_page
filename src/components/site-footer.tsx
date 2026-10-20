@@ -1,6 +1,9 @@
+import { useTranslations } from "next-intl";
 import { siteConfig } from "@/lib/site";
 
 export function SiteFooter() {
+  const t = useTranslations("Footer");
+
   return (
     <footer className="border-t border-border bg-background">
       <div className="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 pb-6 pt-10 md:px-16 lg:px-[120px]">
@@ -10,13 +13,13 @@ export function SiteFooter() {
               {siteConfig.name.toUpperCase()}
             </p>
             <p className="text-base leading-relaxed text-muted-foreground">
-              {siteConfig.tagline}
+              {t("tagline")}
             </p>
           </div>
 
           <div className="flex flex-col gap-10 sm:flex-row sm:gap-16">
             <div className="flex flex-col gap-4">
-              <p className="font-mono text-sm uppercase text-faint">Inquiries</p>
+              <p className="font-mono text-sm uppercase text-faint">{t("inquiries")}</p>
               {siteConfig.inquiries.map((email) => (
                 <a
                   key={email}
@@ -29,7 +32,7 @@ export function SiteFooter() {
             </div>
 
             <div className="flex flex-col gap-4">
-              <p className="font-mono text-sm uppercase text-faint">Social</p>
+              <p className="font-mono text-sm uppercase text-faint">{t("social")}</p>
               {siteConfig.socials.map((social) => (
                 <a
                   key={social.label}
@@ -47,7 +50,10 @@ export function SiteFooter() {
 
         <div className="flex flex-col gap-2 font-mono text-xs uppercase text-faint sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
+            {t("rights", {
+              year: new Date().getFullYear(),
+              name: siteConfig.name,
+            })}
           </p>
           <p>{siteConfig.locations}</p>
         </div>

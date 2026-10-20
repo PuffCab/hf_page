@@ -1,12 +1,15 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/section-heading";
 import { stagedProductions } from "@/data/director";
 
 export function StagedProductions() {
+  const t = useTranslations("Director");
+
   return (
     <section className="mx-auto flex max-w-[1440px] flex-col gap-10 px-6 py-16 md:px-16 lg:px-[120px]">
-      <SectionHeading eyebrow="// Directorial Résumé">
-        Staged Productions
+      <SectionHeading eyebrow={t("productionsEyebrow")}>
+        {t("productionsHeading")}
       </SectionHeading>
 
       <ul className="grid gap-6 md:grid-cols-2">
@@ -18,7 +21,7 @@ export function StagedProductions() {
             <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl">
               <Image
                 src={production.image}
-                alt={`${production.title} staged production still`}
+                alt={t("productionStillAlt", { title: production.title })}
                 fill
                 sizes="(min-width: 768px) 50vw, 100vw"
                 className="object-cover"
@@ -34,7 +37,7 @@ export function StagedProductions() {
                 </span>
               </div>
               <p className="text-sm text-muted-foreground">
-                Staged at:{" "}
+                {t("stagedAt")}{" "}
                 <span className="font-semibold text-foreground">
                   {production.venue}
                 </span>
